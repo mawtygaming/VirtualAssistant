@@ -50,10 +50,10 @@ def takeCommand():
 
 # Main Program starts here.
 def main():
-    # speak("Initializing Kalbo...")
-    # # time.sleep(4)
-    # speak("Initializing Complete!")
-    # greetings()
+    speak("Initializing Kalbo...")
+    time.sleep(4)
+    speak("Initializing Complete!")
+    greetings()
 
     query = takeCommand()
     yt = "open youtube"
