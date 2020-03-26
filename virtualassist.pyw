@@ -6,6 +6,7 @@ import webbrowser
 import os
 import time
 
+# Link to start an application, run: Shell:common startup
 BOSS = "Boss Maw"
 # AI = "alexa"
 engine = pyttsx3.init('sapi5')
