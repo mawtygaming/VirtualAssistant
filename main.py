@@ -65,79 +65,67 @@ def main():
         query = query.replace("wikipedea", "")
         results = wikipedia.summary(query, sentences = 1)
         speak(results)
-        main()
 
     elif 'open python tutorials' in query.lower():
         speak("Opening Python Tutorials.")
         url = "https://www.youtube.com/watch?v=k9TUPpGqYTo&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&index=2"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif yt in query.lower():
         speak("Opening Youtube.")
         url = "youtube.com"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif 'open google' in query.lower():
         speak("Opening Google.")
         url = "google.com"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif 'open facebook' in query.lower():
         speak("Opening Facebook.")
         url = "facebook.com"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif 'open messenger' in query.lower():
         speak("Opening Messenger.")
         url = "messenger.com"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif 'open my manga' in query.lower():
         speak("Opening Manga reader.")
         url = "mangareader.net"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif 'open github' in query.lower():
         speak("Opening Git Hub.")
         url = "github.com"
         chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         webbrowser.get(chrome_path).open(url)
-        main()
 
     elif 'play music' in query.lower():
         songs_dir = 'C:/Users/markb/Music'
         songs = os.listdir(songs_dir)
         os.startfile(os.path.join(songs_dir, songs[0]))
-        main()
 
     elif 'the time' in query.lower():
         strTime = datetime.datetime.now().strftime("%H:%M")
         speak(f"{BOSS}, the time is {strTime}")
-        main()
 
     elif 'open steam' in query.lower():
         speak("Opening Steam.")
         steamPath = 'C:\\Program Files (x86)\\Steam\\Steam.exe'
         os.startfile(steamPath)
-        main()
 
     elif 'open remote' in query.lower():
         speak("Opening Putty")
         puttyPath = 'C:\\Program Files\\PuTTY\\putty.exe'
         os.startfile(puttyPath)
-        main()
 
     else:
         speak("I can't understand you!")
