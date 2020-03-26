@@ -62,6 +62,10 @@ def main():
 
     # Logic on executing basic task.
     try:
+        if 'hello' in query.lower():
+            speak("Hi" + BOSS + "what can I do for you?")
+            main()
+
         if 'wikipedia' in query.lower():
             speak("Searching Wikipedia...")
             query = query.replace("wikipedea", "")
