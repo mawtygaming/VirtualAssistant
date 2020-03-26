@@ -49,12 +49,12 @@ def takeCommand():
     return query
 
 # Main Program starts here.
-def main():
-    speak("Initializing Kalbo...")
-    time.sleep(4)
-    speak("Initializing Complete!")
-    greetings()
+speak("Initializing Kalbo...")
+time.sleep(4)
+speak("Initializing Complete!")
+greetings()
 
+def main():
     query = takeCommand()
     yt = "open youtube"
 
