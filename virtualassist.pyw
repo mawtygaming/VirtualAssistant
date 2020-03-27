@@ -66,6 +66,10 @@ def main():
             speak("Hi" + BOSS + "what can I do for you?")
             main()
 
+        if 'please restart' in query.lower():
+            speak("Restarting your computer" + BOSS)
+            os.system("shutdown /r /t 1") 
+
         if 'wikipedia' in query.lower():
             speak("Searching Wikipedia...")
             query = query.replace("wikipedea", "")
