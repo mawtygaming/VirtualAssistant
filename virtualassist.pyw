@@ -24,9 +24,9 @@ def greetings():
 
     if hour >= 0 and hour < 12:
         speak("Magandang Umaga!" + BOSS)
-    elif hour >= 12 and hour <= 18:
+    elif hour >= 12 and hour < 18:
         speak("Magandang Hapon!" + BOSS)
-    elif hour > 18 and hour <= 23:
+    elif hour >= 18 and hour <= 23:
         speak("Magandang Gabi!" + BOSS)
     else:
         pass
@@ -37,6 +37,8 @@ def takeCommand():
     with sr.Microphone() as source:
         print("Listening...")
         audio = r.listen(source)
+        r.pause_threshold = 1
+        r.energy_threshold = 400
 
     try:
         print("Recognizing...")
