@@ -5,6 +5,10 @@ import pyttsx3
 import speech_recognition as sr 
 import datetime
 
+global ti
+
+ti = StringVar()
+
 # This function is the object of the main window
 class mainWindow:
     def __init__(self, ui):
@@ -63,8 +67,8 @@ def speakEngine():
     engine.setProperty('voice', voices[1].id)
 
 def speak(audio):
-    speakEngine().engine.say(audio)
-    speakEngine().engine.runAndWait()
+    engine.say(audio)
+    engine.runAndWait()
 
 def takeCommand():
     r = sr.Recognizer()
